@@ -15,7 +15,7 @@ export default function CompositionDemo() {
       standard={standard}
       domain={window.location.href}
     >
-      <ErrorBoundaryDemo />
+      <ErrorBoundaryDemo title={"Error Boundary for Composition demo"} />
     </FeatureFlagDemo>
   );
 }
