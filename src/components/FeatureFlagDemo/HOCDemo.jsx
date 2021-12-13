@@ -7,16 +7,16 @@ const role = "visitor";
 const standard = 0; // for success demo
 
 const HOCDemoComponent = () => (
-  <>
-    <FeatureFlagDemo role={role} standard={standard}>
-      <ErrorBoundaryDemo />
-    </FeatureFlagDemo>
-  </>
+  <FeatureFlagDemo role={role} standard={standard}>
+    <ErrorBoundaryDemo />
+  </FeatureFlagDemo>
 );
 
 const HOCDemo = FeatureFlagDemo({
+  mode: "intersection",
   role,
   standard,
+  domain: window.location.href,
   Component: HOCDemoComponent,
 });
 

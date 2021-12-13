@@ -2,16 +2,20 @@ import React from "react";
 import ErrorBoundaryDemo from "../ErrorBoundaryDemo";
 import FeatureFlagDemo from ".";
 
-const role = "superAdmin";
-const standard = 4; // for failure demo
-// const standard = 0; // for success demo
+const role = "visitor";
+// const standard = 4; // for failure demo
+const standard = 0; // for success demo
 
 export default function CompositionDemo() {
+  console.log(window.location.href);
   return (
-    <>
-      <FeatureFlagDemo role={role} standard={standard}>
-        <ErrorBoundaryDemo />
-      </FeatureFlagDemo>
-    </>
+    <FeatureFlagDemo
+      mode={"intersection"}
+      role={role}
+      standard={standard}
+      domain={window.location.href}
+    >
+      <ErrorBoundaryDemo />
+    </FeatureFlagDemo>
   );
 }
