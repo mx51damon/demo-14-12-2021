@@ -10,7 +10,7 @@ export default function CompositionDemo() {
   console.log(window.location.href);
   return (
     <FeatureFlagDemo
-      mode={"intersection"}
+      mode={"union"}
       role={role}
       standard={standard}
       domain={window.location.href}

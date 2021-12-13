@@ -13,7 +13,7 @@ const HOCDemoComponent = () => (
 );
 
 const HOCDemo = FeatureFlagDemo({
-  mode: "intersection",
+  mode: "union",
   role,
   standard,
   domain: window.location.href,
