@@ -7,9 +7,7 @@ const role = "visitor";
 const standard = 0; // for success demo
 
 const HOCDemoComponent = () => (
-  <FeatureFlagDemo role={role} standard={standard}>
-    <ErrorBoundaryDemo title={"Error Boundary for HOC demo"} />
-  </FeatureFlagDemo>
+  <ErrorBoundaryDemo title={"Error Boundary for HOC demo"} />
 );
 
 const HOCDemo = FeatureFlagDemo({

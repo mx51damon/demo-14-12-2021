@@ -7,7 +7,6 @@ const role = "visitor";
 const standard = 0; // for success demo
 
 export default function CompositionDemo() {
-  console.log(window.location.href);
   return (
     <FeatureFlagDemo
       mode={"union"}
